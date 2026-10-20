@@ -1,0 +1,22 @@
+.bank-strip{background:#f0f5ef;border-top:1px solid #dce7dc;border-bottom:1px solid #dce7dc;padding:30px 0;overflow:hidden}
+.bank-strip-layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:30px;align-items:center}
+.bank-strip-heading{border-right:1px solid #d4e1d4;padding-right:25px;position:relative;z-index:1}
+.partner-kicker{display:flex;align-items:center;gap:6px;color:#6a8775;font-size:7px;letter-spacing:1.5px;font-weight:700;margin-bottom:10px}
+.partner-kicker i{width:5px;height:5px;border-radius:50%;background:var(--green)}
+.bank-strip-heading h2{font-family:Manrope,sans-serif;font-size:23px;font-weight:700;letter-spacing:-.8px;line-height:1.25;color:var(--blue);margin:0}
+.bank-motion-control{display:flex;align-items:center;gap:5px;font-size:8px;color:#688673;padding:0;margin-top:13px}
+.bank-motion-control:hover{color:var(--teal)}
+.bank-marquee{min-width:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;mask-image:linear-gradient(to right,transparent,#000 25px,#000 calc(100% - 25px),transparent);padding:15px 0;overscroll-behavior-x:contain}
+.bank-marquee::-webkit-scrollbar{display:none}
+.bank-marquee:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:6px}
+.bank-track{display:flex;width:max-content;animation:banks-scroll-right 134.4s linear infinite;will-change:transform}
+.bank-group{display:flex;align-items:center;gap:40px;list-style:none;padding:0 40px 0 0;margin:0;flex-shrink:0}
+.bank-name{display:flex;align-items:center;gap:12px;white-space:nowrap;color:#315848;font-family:Manrope,sans-serif;font-size:17px;font-weight:700;letter-spacing:-.5px;flex-shrink:0}
+.bank-monogram{height:42px;width:42px;border:1px solid #caddcc;background:#e3eee1;border-radius:11px;display:grid;place-items:center;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:-.3px;color:var(--teal);flex-shrink:0}
+.bank-monogram.tone-1{background:#e3ecef;color:var(--blue);border-color:#d0dfe3}
+.bank-monogram.tone-2{background:#e0ede6;color:var(--green);border-color:#c9dfd1}
+.bank-track[data-paused=true],.bank-marquee:hover .bank-track,.bank-marquee:focus-within .bank-track{animation-play-state:paused}
+@keyframes banks-scroll-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media(max-width:800px){.bank-strip-layout{grid-template-columns:160px minmax(0,1fr);gap:20px}.bank-strip-heading{padding-right:20px}.bank-strip-heading h2{font-size:21px}.partner-kicker{font-size:6px;letter-spacing:1px}.bank-name{font-size:15px;gap:10px}.bank-group{gap:30px;padding-right:30px}.bank-monogram{width:37px;height:37px;font-size:11px}}
+@media(max-width:560px){.bank-strip{padding:23px 0}.bank-strip-layout{grid-template-columns:minmax(0,1fr);gap:15px}.bank-strip-heading{border:0;padding:0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.partner-kicker{width:100%;margin-bottom:0;font-size:6px}.bank-strip-heading h2{font-size:21px}.bank-strip-heading h2 br{display:none}.bank-strip-heading h2 br:after{content:' '}.bank-motion-control{margin:0;font-size:8px}.bank-marquee{padding:8px 0;mask-image:linear-gradient(to right,transparent,#000 12px,#000 calc(100% - 12px),transparent)}.bank-name{font-size:14px}.bank-group{gap:25px;padding-right:25px}.bank-monogram{width:34px;height:34px;border-radius:9px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){.bank-track{animation:none!important;transform:none;will-change:auto}.bank-group[aria-hidden=true]{display:none}.bank-motion-control{display:none}}
