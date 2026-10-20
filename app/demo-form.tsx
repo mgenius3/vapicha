@@ -2,6 +2,10 @@
 import { useState, type FormEvent } from 'react';
 import { Mail } from 'lucide-react';
 
+// FormSubmit relays the submission by email, so no server is needed.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/business@vapicha.africa';
+const CC_EMAILS = 'info@ivillagetech.com';
+
 export default function DemoForm() {
  const [state, setState] = useState<'idle'|'sending'|'sent'|'error'>('idle');
  const [error, setError] = useState('');
@@ -9,10 +13,11 @@ export default function DemoForm() {
   event.preventDefault();
   const form = event.currentTarget;
   setState('sending');
+  const { website, ...fields } = Object.fromEntries(new FormData(form));
   try {
-   const response = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+   const response = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ ...fields, _cc: CC_EMAILS, _replyto: fields.email, _subject: 'VaPicha demo request', _template: 'table', _captcha: 'false', _honey: website }) });
    const result = await response.json();
-   if (!response.ok) throw new Error(result.error || 'Your request could not be sent. Please try again.');
+   if (!response.ok || String(result.success) !== 'true') throw new Error(result.message || 'Your request could not be sent. Please try again.');
    setState('sent'); form.reset();
   } catch (err) { setState('error'); setError(err instanceof Error ? err.message : 'Your request could not be sent. Please try again.'); }
  }
