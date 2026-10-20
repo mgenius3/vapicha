@@ -5,10 +5,14 @@ import { Pause, Play } from 'lucide-react';
 import './bank-strip.css';
 import bankLogos from './bank-logos.json';
 
-// Full commercial-bank category in the CBN directory, checked 19 October 2026.
+// Commercial banks plus selected fintech providers.
 // https://www.cbn.gov.ng/supervision/Inst-DM.html
 // Bank listing is not independent verification of a VaPicha partnership.
 const banks = [
+  ['OPay', 'OP'],
+  ['PalmPay', 'PP'],
+  ['Moniepoint', 'MP'],
+  ['Kuda', 'KU'],
   ['Access Bank', 'AC'],
   ['Alpha Morgan Bank', 'AM'],
   ['Citibank Nigeria', 'CI'],
@@ -61,7 +65,7 @@ export default function BankStrip() {
           className="bank-marquee"
           tabIndex={0}
           role="region"
-          aria-label="Nigerian commercial banks. Scroll horizontally to explore."
+          aria-label="Nigerian banks and fintech providers. Scroll horizontally to explore."
         >
           <div className="bank-track" data-paused={paused}>
             {[0, 1].map(copy => (

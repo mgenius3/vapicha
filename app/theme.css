@@ -14,3 +14,6 @@ html[data-theme=light] .opportunity h2,html[data-theme=light] .opportunity h3,ht
 @media(max-width:1100px) and (min-width:801px){.nav{gap:16px}.navlinks{gap:18px}.nav .brand img{width:135px}}
 @media(max-width:800px){.nav{gap:12px}.theme-toggle{width:32px;height:32px}.nav-auth{gap:10px}}
 @media(max-width:450px){.nav{gap:8px}.nav .brand img{width:95px}.nav-auth{gap:8px}.nav-auth .button{padding:10px}.nav-auth .sign-in{font-size:11px}.theme-toggle{width:30px;height:30px}}
+/* Keep navigation available throughout the page, with room for anchor targets. */
+:root{--header-height:100px}body{padding-top:var(--header-height)}header#top{position:fixed;inset:0 0 auto;z-index:50;box-shadow:0 4px 24px #00000012}header#top .nav{height:var(--header-height)}html{scroll-padding-top:calc(var(--header-height) + 20px)}
+@media(max-width:800px){:root{--header-height:83px}header#top .navlinks.open{top:calc(var(--header-height) - 1px)}}

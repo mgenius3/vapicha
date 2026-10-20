@@ -26,5 +26,9 @@
   "United Bank for Africa": "/banks/united-bank-for-africa.png",
   "Unity Bank": "/banks/unity-bank.png",
   "Wema Bank": "/banks/wema-bank.png",
-  "Zenith Bank": "/banks/zenith-bank.png"
+  "Zenith Bank": "/banks/zenith-bank.png",
+  "OPay": "/banks/opay.png",
+  "PalmPay": "/banks/palmpay.png",
+  "Moniepoint": "/banks/moniepoint.png",
+  "Kuda": "/banks/kuda.png"
 }
