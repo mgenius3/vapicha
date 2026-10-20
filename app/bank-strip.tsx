@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Pause, Play } from 'lucide-react';
 import './bank-strip.css';
+import bankLogos from './bank-logos.json';
 
 // Full commercial-bank category in the CBN directory, checked 19 October 2026.
 // https://www.cbn.gov.ng/supervision/Inst-DM.html
@@ -45,7 +46,7 @@ export default function BankStrip() {
       <div className="container bank-strip-layout">
         <div className="bank-strip-heading">
           <span className="partner-kicker"><i /> CONNECTED FOR MORE</span>
-          <h2 id="partners-heading">Our trusted <br />partner</h2>
+          <h2 id="partners-heading">Auto Direct Debit partnering Banks</h2>
           <button
             className="bank-motion-control"
             onClick={() => setPaused(!paused)}
@@ -65,9 +66,9 @@ export default function BankStrip() {
           <div className="bank-track" data-paused={paused}>
             {[0, 1].map(copy => (
               <ul className="bank-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
-                {banks.map(([name, initials], index) => (
+                {banks.map(([name]) => (
                   <li className="bank-name" key={name}>
-                    <span className={`bank-monogram tone-${index % 3}`} aria-hidden="true">{initials}</span>
+                    <span className="bank-logo"><img src={bankLogos[name]} alt="" width="64" height="64"/></span>
                     <span>{name}</span>
                   </li>
                 ))}
