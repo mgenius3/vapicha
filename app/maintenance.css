@@ -1,0 +1,18 @@
+body:has(.maintenance){padding-top:0}
+.maintenance{min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:28px;padding:24px 16px 32px;box-sizing:border-box}
+.maintenance-top{width:100%;max-width:1100px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.maintenance-copy{max-width:560px;text-align:center;display:flex;flex-direction:column;align-items:center;margin-top:24px}
+.maintenance-icon{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--mint);margin-bottom:16px}
+.maintenance-copy h1{font-size:clamp(30px,6vw,46px);line-height:1.1;margin:12px 0}
+.maintenance-copy h1>span{color:var(--mint)}
+.maintenance-copy p{color:var(--muted);margin:0;font-size:15px}
+.maintenance-card{width:100%;max-width:540px;box-sizing:border-box;padding:30px;border:1px solid #3a506e;border-radius:16px;background:#111e2f;color:#e9f2ff;box-shadow:0 30px 110px #0006}
+.maintenance-card form>.button{margin-top:22px}
+.maintenance-card h2{margin:0 0 16px;font-size:22px;letter-spacing:-.01em}
+.maintenance-contact{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;font-size:13px}
+.maintenance-contact a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.maintenance-contact a:hover{color:var(--mint)}
+.maintenance-foot{margin:auto 0 0;color:var(--muted);font-size:12px;text-align:center}
+html[data-theme=light] .maintenance-card{background:#fff;color:#173e56;border-color:#b9d0df;box-shadow:0 25px 80px #0e3e601f}
+html[data-theme=light] .maintenance-card .form-grid label{color:#42647e}
+@media (max-width:560px){.maintenance-card{padding:22px 18px}}

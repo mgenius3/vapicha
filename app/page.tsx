@@ -8,6 +8,9 @@ import './contact-compliance.css';
 import './theme.css';
 import ThemeToggle from './theme-toggle';
 import DemoForm from './demo-form';
+import Maintenance from './maintenance';
+
+const MAINTENANCE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 import { ArrowUpRight, ArrowRight, Check, ChevronDown, Menu, X, Play, Pause, RotateCcw, LayoutDashboard, Users, Wallet, ChartNoAxesCombined, Settings, Bell, Search, Plus, FileText, Landmark, ShieldCheck, Smartphone, Globe2, Layers3, CircleHelp, ArrowDownLeft, SlidersHorizontal, Building2, HeartHandshake, Sprout, TrendingUp, CheckCheck, Mail, Linkedin, Instagram } from 'lucide-react';
 
 const products = [
@@ -58,7 +61,9 @@ function WorkflowPreview({ paused }: { paused: boolean }) {
 function ProductMiniature({ index }: { index: number }) {
  return <div className={`product-mini miniature-${index}`} aria-hidden="true">{index===0?<><span className="mini-heading">New application <FileText size={12}/></span><i/><i/><div className="mini-action"><Check size={10}/> Ready for review</div></>:index===1?<><span className="mini-heading">Repayment schedule <Wallet size={12}/></span>{['Month 01','Month 02','Month 03'].map(m=><div className="mini-schedule" key={m}><span>{m}</span><i/><Check size={9}/></div>)}</>:index===2?<><span className="mini-transfer"><ArrowUpRight size={24}/></span><b>Keep money moving.</b><span className="mini-route"><i/>Disburse <ArrowRight size={12}/> Collect<i/></span></>:<><span className="mini-heading">Portfolio insights <TrendingUp size={12}/></span><div className="mini-chart">{[35,58,43,74,64,94].map((height,i)=><i key={i} style={{height:`${height}%`}}/>)}</div></>}</div>;
 }
-export default function Home() {
+export default function Home() { return MAINTENANCE ? <Maintenance/> : <Site/>; }
+
+function Site() {
  const [motionPaused, setMotionPaused]=useState(false);
  const [menu, setMenu]=useState(false); const [audience,setAudience]=useState(0);  const dialog=useRef<HTMLDialogElement>(null);
  useEffect(() => {
