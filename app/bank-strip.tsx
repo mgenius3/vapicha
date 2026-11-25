@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Pause, Play } from 'lucide-react';
-import './bank-strip.css';
 import bankLogos from './bank-logos.json';
 
 // Commercial banks plus selected fintech providers.

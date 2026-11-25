@@ -1,10 +1,5 @@
 'use client';
 import { ArrowUpRight, Wrench } from 'lucide-react';
-import './redesign.css';
-import './dark-theme.css';
-import './contact-compliance.css';
-import './theme.css';
-import './maintenance.css';
 import ThemeToggle from './theme-toggle';
 import DemoForm from './demo-form';
 

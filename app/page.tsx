@@ -1,11 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import './redesign.css';
-import './product-motion.css';
 import BankStrip from './bank-strip';
-import './dark-theme.css';
-import './contact-compliance.css';
-import './theme.css';
 import DemoForm from './demo-form';
 import Maintenance from './maintenance';
 import { Header, Footer, WhatsAppButton } from './site-shell';
