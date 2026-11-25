@@ -1,0 +1,44 @@
+/* VaPicha corporate website: classic serif headings, navy + gold brand palette (light and dark). */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+
+.vp-site {
+  --vp-navy: 215 68% 14%;
+  --vp-navy-soft: 215 45% 22%;
+  --vp-gold: 43 64% 46%;
+  --vp-gold-soft: 43 70% 94%;
+  --vp-on-navy: 210 30% 96%;
+  --vp-on-navy-muted: 213 25% 75%;
+}
+.dark .vp-site {
+  --vp-navy: 216 55% 9%;
+  --vp-navy-soft: 216 40% 16%;
+  --vp-gold: 43 72% 58%;
+  --vp-gold-soft: 43 35% 16%;
+  --vp-on-navy: 210 30% 96%;
+  --vp-on-navy-muted: 213 20% 70%;
+}
+.vp-serif { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; letter-spacing: -0.01em; }
+.vp-navy { background-color: hsl(var(--vp-navy)); color: hsl(var(--vp-on-navy)); }
+.vp-navy-soft { background-color: hsl(var(--vp-navy-soft)); }
+.vp-on-navy-muted { color: hsl(var(--vp-on-navy-muted)); }
+.vp-gold-text { color: hsl(var(--vp-gold)); }
+.vp-gold-bg { background-color: hsl(var(--vp-gold)); color: hsl(215 68% 10%); }
+.vp-gold-soft { background-color: hsl(var(--vp-gold-soft)); }
+.vp-gold-border { border-color: hsl(var(--vp-gold)); }
+.vp-rule { height: 3px; width: 56px; background: hsl(var(--vp-gold)); border-radius: 2px; }
+.vp-hero-pattern {
+  background-image:
+    radial-gradient(circle at 85% 15%, hsl(var(--vp-gold) / 0.18), transparent 40%),
+    linear-gradient(hsl(var(--vp-on-navy) / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--vp-on-navy) / 0.04) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 48px 48px;
+}
+.vp-prose h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; font-weight: 600; margin: 2rem 0 0.75rem; color: hsl(var(--foreground)); }
+.vp-prose h3 { font-weight: 600; margin: 1.25rem 0 0.5rem; color: hsl(var(--foreground)); }
+.vp-prose p, .vp-prose li { color: hsl(var(--muted-foreground)); line-height: 1.75; font-size: 0.95rem; }
+.vp-prose ul { list-style: disc; padding-left: 1.25rem; margin: 0.5rem 0; }
+.vp-prose ul li { margin: 0.25rem 0; }
+.vp-prose table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.9rem; }
+.vp-prose th, .vp-prose td { border: 1px solid hsl(var(--border)); padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
+.vp-prose th { background: hsl(var(--muted)); color: hsl(var(--foreground)); font-weight: 600; }
+.vp-prose td { color: hsl(var(--muted-foreground)); }
