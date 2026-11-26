@@ -31,6 +31,6 @@ export default function SolutionsPage() {
    <div className="page-grid g4">{SEGMENTS.map(s=><div key={s.title} className="segment"><h3>{s.title}</h3><p>{s.text}</p></div>)}</div>
    <div className="page-inline-cta"><p>Plans are priced in naira, starting with Starter at ₦250,000 per month.</p><Link className="button" href="/pricing">See our plans <ArrowUpRight size={16}/></Link></div>
   </div></section>
-  <CtaBand/>
+  {/* "The next chapter of your lending starts here." call-to-action, hidden for now. To show it again, replace this comment with <CtaBand/> */}
  </SiteShell>;
 }

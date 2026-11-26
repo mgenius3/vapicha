@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: 'Contact — VaPicha', description: '
 
 export default function ContactPage() {
  return <SiteShell>
-  <PageHero eyebrow="CONTACT US" title="Let’s talk about" accent="your lending." text="Book a live demo, request a quote or ask us anything. A member of our business team will get back to you."/>
+  <PageHero eyebrow="CONTACT US" title="Let’s talk about" accent="your bank." text="Book a live demo, request a quote or ask us anything. A member of our team will respond within one business day."/>
   <section className="page-section"><div className="container contact-grid">
    <div className="contact-card"><h2>Send us a message</h2><DemoForm subject="VaPicha website enquiry" submitLabel="Send message"/><p className="form-note">By sending, you agree to VaPicha processing your details to respond, as described in our <Link href="/legal/privacy">Privacy Policy</Link>.</p></div>
    <aside className="contact-aside">

@@ -38,7 +38,7 @@ export function Footer() {
  return <footer><div className="container"><div className="footer-main footer-main-wide"><div className="footer-brand"><Logo/><p>lending software as a service for all lenders</p><span className="location"><span/> Lagos, Nigeria · Built with purpose.</span></div>
  {FOOTER.map(col=><div key={col.title}><h4>{col.title}</h4>{col.links.map(([href,label])=><Link key={href} href={href}>{label}</Link>)}</div>)}
  <div><h4>LET’S CONNECT</h4><a href={'mailto:'+COMPANY.email}>{COMPANY.email} <ArrowUpRight size={12}/></a>{COMPANY.phones.map(p=><a key={p} href={'tel:'+p.replace(/\s/g,'')}>{p}</a>)}<div className="footer-social"><a href="#" aria-label="VaPicha on LinkedIn"><Linkedin size={15}/></a><a href="#" aria-label="VaPicha on X"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" aria-label="VaPicha on Instagram"><Instagram size={15}/></a></div></div>
- </div><div className="footer-bottom"><span>©️ 2026 VaPicha | A Product of Inclusive Village Ltd. All rights reserved.</span><span>Built for Nigeria. Designed for lenders. <ArrowUpRight size={12}/></span></div></div></footer>;
+ </div><div className="footer-bottom"><span>©️ 2026 VaPicha | A Product of Inclusive Village Ltd. All rights reserved.</span><span>VaPicha Core Banking Suite · Built in Nigeria for Nigerian banking</span></div></div></footer>;
 }
 
 export function WhatsAppButton() {

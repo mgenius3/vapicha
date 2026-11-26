@@ -4,13 +4,13 @@ import { ArrowRight, ArrowUpRight, CheckCircle2, FileText, ShieldCheck } from 'l
 import { SiteShell, SectionHeading, CtaBand, Eyebrow } from './site-shell';
 import { ADVANTAGES, SEGMENTS, SOLUTIONS, STATS } from './site-content';
 import { Screen } from './screens';
-import BankStrip from './bank-strip';
+// import BankStrip from './bank-strip'; // hidden for now, see the comment in the page body
 
 export default function Home() {
  return <SiteShell>
   <section className="page-hero home-hero"><div className="container home-hero-grid">
    <div>
-    <Eyebrow>CORE BANKING · PAYMENTS · DIGITAL CHANNELS</Eyebrow>
+    <Eyebrow>CORE BANKING · PAYMENTS · DIGITAL CHANNELS · HR</Eyebrow>
     <h1>Banking infrastructure worthy of the trust <span>your customers place in you.</span></h1>
     <p>VaPicha runs your entire institution — customers, accounts, lending, payments, compliance and people — on one secure, cloud platform built for Nigerian regulation.</p>
     <div className="home-actions"><Link className="button" href="/contact">Book a demo <ArrowUpRight size={18}/></Link><Link className="button button-ghost" href="/product">See the product</Link></div>
@@ -21,7 +21,7 @@ export default function Home() {
 
   <section className="home-stats"><div className="container">{STATS.map(s=><div key={s.label}><b>{s.value}</b><span>{s.label}</span></div>)}</div></section>
 
-  <BankStrip/>
+  {/* Auto Direct Debit partner banks strip, hidden for now. To show it again, replace this comment with <BankStrip/> and restore the import above. */}
 
   <section className="page-section"><div className="container">
    <SectionHeading eyebrow="WHY VAPICHA" title="The advantages of a modern," accent="purpose-built core." text="We combined deep Nigerian banking know-how with modern engineering, so your team spends its time serving customers — not reconciling systems."/>
@@ -48,6 +48,7 @@ export default function Home() {
 
   <section className="section compliance-section" id="security" aria-labelledby="security-title"><div className="container compliance-grid"><div className="compliance-copy"><Eyebrow>TRUST, WITH SOMETHING TO SHOW</Eyebrow><h2 id="security-title">Built on security.<br/><span>Driven by compliance.</span></h2><p>Responsible data handling starts with accountability. Inclusive Village Ltd, the company behind VaPicha, is registered with the Nigeria Data Protection Commission.</p><div className="compliance-note"><ShieldCheck size={22}/><span>Registered as a data controller / processor of major importance.</span></div><a className="text-link" href="mailto:hello@vapicha.africa">Talk to us about data protection <ArrowUpRight size={17}/></a></div><article className="registration-card"><div className="registration-top"><span className="registration-icon"><ShieldCheck size={27}/></span><span className="registration-label">NDPC REGISTRATION</span><span className="registration-status"><span/> Registered</span></div><div className="registration-content"><div><h3>Accountability.<br/>You can verify.</h3><p>Inclusive Village Ltd</p></div><figure><a href="https://services.ndpc.gov.ng/portal/?page=verify-c&amp;d=dn43501507966&amp;id=63134&amp;sn=90b8e055ca6517f055533bdc1ada886f&amp;t=dp_registration&amp;tp=nwp_eosic" target="_blank" rel="noopener noreferrer" aria-label="Verify NDPC registration (opens in a new tab)"><img src="/ndpc-registration-qr.png" width="352" height="352" alt="QR code extracted from Inclusive Village Ltd’s NDPC registration certificate"/></a><figcaption>Scan or tap to verify</figcaption></figure></div><div className="registration-foot"><FileText size={16}/><span>Nigeria Data Protection Act, 2023 · Section 44</span></div></article></div><div className="container compliance-badges" aria-label="Compliance standards"><div className="compliance-badge"><span className="compliance-badge-image"><img src="/ndpr-badge.png" width="115" height="140" alt=""/></span><span>NDPR Compliant</span></div><div className="compliance-badge"><span className="compliance-badge-image"><img src="/pci-dss-badge.png" width="150" height="140" alt=""/></span><span>PCI DSS Compliant</span></div></div></section>
 
-  <CtaBand title="Ready to modernise your institution?" text="See the platform on your own data and get a tailored quote for your institution."/>
+  {/* "Ready to modernise your institution?" call-to-action, hidden for now. To show it again, replace this comment with:
+      <CtaBand title="Ready to modernise your institution?" text="See the platform on your own data and get a tailored quote for your institution."/> */}
  </SiteShell>;
 }
