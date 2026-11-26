@@ -1,6 +1,6 @@
 # Direct contact email
 
-The demo form posts all five fields to `/api/contact`, which sends to the fixed recipient `business@vapicha.africa` through Resend. The visitor's work email is the reply-to address. No email credentials are exposed to the browser.
+The demo form posts all five fields to `/api/contact`, which sends to the fixed recipient `hello@vapicha.africa` through Resend. The visitor's work email is the reply-to address. No email credentials are exposed to the browser.
 
 1. Verify a sending domain in Resend and create a sending API key.
 2. Set `RESEND_API_KEY` and `CONTACT_FROM_EMAIL` in `.env.local` locally or in the deployment's environment settings. See `.env.example`. Do not commit secrets.

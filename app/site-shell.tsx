@@ -13,14 +13,14 @@ export const MAINTENANCE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 const NAV = [
  { href: '/solutions', label: 'Solutions' },
  { href: '/product', label: 'Product' },
- { href: '/#pricing', label: 'Pricing' },
+ { href: '/pricing', label: 'Pricing' },
  { href: '/about', label: 'About us' },
  { href: '/contact', label: 'Contact' },
 ];
 
 const FOOTER = [
- { title: 'THE PLATFORM', links: [['/#platform', 'What we do'], ['/solutions', 'Solutions'], ['/product', 'Product tour'], ['/#pricing', 'Our plans'], ['/#security', 'Security & compliance']] },
- { title: 'COMPANY', links: [['/about', 'About us'], ['/careers', 'Careers'], ['/contact', 'Contact'], ['/#faqs', 'FAQs']] },
+ { title: 'THE PLATFORM', links: [['/#platform', 'What we do'], ['/solutions', 'Solutions'], ['/product', 'Product tour'], ['/pricing', 'Our plans'], ['/#security', 'Security & compliance']] },
+ { title: 'COMPANY', links: [['/about', 'About us'], ['/careers', 'Careers'], ['/contact', 'Contact'], ['/pricing#faqs', 'FAQs']] },
  { title: 'LEGAL', links: [['/legal/privacy', 'Privacy policy'], ['/legal/cookies', 'Cookie policy'], ['/legal/ims', 'IMS policy']] },
 ];
 
@@ -31,7 +31,7 @@ export function Logo() {
 export function Header() {
  const [menu, setMenu] = useState(false);
  const pathname = usePathname();
- return <header id="top"><nav className="nav container"><Logo/><div className={'navlinks '+(menu?'open':'')}>{NAV.map(n=><Link key={n.href} href={n.href} aria-current={pathname===n.href?'page':undefined} onClick={()=>setMenu(false)}>{n.label}</Link>)}</div><ThemeToggle/><div className="nav-auth"><a className="sign-in" href="https://control.vapicha.africa/">Sign in</a><a className="button" href="https://control.vapicha.africa/auth/organization-signup">Sign up <ArrowUpRight size={16}/></a></div><button className="mobile-menu" aria-expanded={menu} aria-label={menu?'Close navigation':'Open navigation'} onClick={()=>setMenu(!menu)}>{menu?<X/>:<Menu/>}</button></nav></header>;
+ return <header id="top"><nav className="nav container"><Logo/><div className={'navlinks '+(menu?'open':'')}>{NAV.map(n=><Link key={n.href} href={n.href} aria-current={pathname===n.href?'page':undefined} onClick={()=>setMenu(false)}>{n.label}</Link>)}</div><ThemeToggle/><div className="nav-auth"><Link className="button" href="/contact">Book a demo <ArrowUpRight size={16}/></Link></div><button className="mobile-menu" aria-expanded={menu} aria-label={menu?'Close navigation':'Open navigation'} onClick={()=>setMenu(!menu)}>{menu?<X/>:<Menu/>}</button></nav></header>;
 }
 
 export function Footer() {

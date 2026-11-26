@@ -7,7 +7,7 @@ They have been **ported into the live site** on the `site-pages` branch:
 | Export file | Live version |
 |---|---|
 | `siteData.ts` | `app/site-content.ts` (company details changed to match the landing page; zip pricing, stats and testimonial dropped) |
-| `policies.ts` | `app/policies.ts` (Inclusive Village Ltd, business@vapicha.africa; cookie policy rewritten for what the site actually uses) |
+| `policies.ts` | `app/policies.ts` (Inclusive Village Ltd, hello@vapicha.africa; cookie policy rewritten for what the site actually uses) |
 | `SiteLayout.tsx`, `ui.tsx` | `app/site-shell.tsx` (shared header, footer, page hero; no cookie banner) |
 | `SiteSolutions.tsx` | `app/solutions/page.tsx` (pricing links to `/#pricing`) |
 | `SiteProduct.tsx`, `screens/Shots.tsx` | `app/product/page.tsx`, `app/screens.tsx` (plain CSS, no recharts) |
@@ -17,4 +17,4 @@ They have been **ported into the live site** on the `site-pages` branch:
 | `SiteLegal.tsx` | `app/legal/[slug]/page.tsx` |
 | `site.css` | not used; styles are in `app/pages.css`, matching the landing page |
 
-Forms send through FormSubmit to business@vapicha.africa, like the landing page's demo form. The export's `website/submitWebsiteLead` backend isn't used.
+Forms send through FormSubmit to hello@vapicha.africa, like the landing page's demo form. The export's `website/submitWebsiteLead` backend isn't used.

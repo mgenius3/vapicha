@@ -17,7 +17,7 @@ function ApplyForm({ job }: { job: Job }) {
    <label>LinkedIn or portfolio<input name="linkedin" type="url" placeholder="https://" maxLength={300}/></label>
    <label className="full-width">Why this role?<textarea name="message" rows={4} maxLength={5000}/></label>
   </div>
-  <p className="form-note">By applying, you agree to VaPicha processing your details as described in our <Link href="/legal/privacy">Privacy Policy</Link>. Please email your CV to <a href="mailto:business@vapicha.africa">business@vapicha.africa</a> quoting “{job.title}”.</p>
+  <p className="form-note">By applying, you agree to VaPicha processing your details as described in our <Link href="/legal/privacy">Privacy Policy</Link>. Please email your CV to <a href="mailto:hello@vapicha.africa">hello@vapicha.africa</a> quoting “{job.title}”.</p>
   <Honeypot/>
   <button className="button" type="submit" disabled={state==='sending'}>{state==='sending'?'Sending…':'Submit application'} <Send size={16}/></button>
   <FormStatus state={state} error={error} sent="Application sent. Our team will review it and reply by email."/>

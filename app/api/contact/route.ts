@@ -24,7 +24,7 @@ export async function POST(request: Request) {
  try {
   const result = await fetch('https://api.resend.com/emails', {
    method:'POST', headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},
-   body:JSON.stringify({from,to:['business@vapicha.africa'],reply_to:fields.email,subject:'VaPicha demo request',text:`Name: ${fields.name}\nEmail: ${fields.email}\nInstitution: ${fields.institution}\nType: ${fields.type}\n\nNeeds: ${fields.message || 'Please contact me to arrange a demo.'}`}),
+   body:JSON.stringify({from,to:['hello@vapicha.africa'],reply_to:fields.email,subject:'VaPicha demo request',text:`Name: ${fields.name}\nEmail: ${fields.email}\nInstitution: ${fields.institution}\nType: ${fields.type}\n\nNeeds: ${fields.message || 'Please contact me to arrange a demo.'}`}),
    signal:AbortSignal.timeout(15000)
   });
   if (!result.ok) return NextResponse.json({error:'Your request could not be sent. Please try again shortly.'},{status:502});

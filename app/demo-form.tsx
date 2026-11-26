@@ -3,7 +3,7 @@ import { useState, type FormEvent } from 'react';
 import { Mail } from 'lucide-react';
 
 // FormSubmit relays the submission by email, so no server is needed.
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/business@vapicha.africa';
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hello@vapicha.africa';
 const CC_EMAILS = 'info@ivillagetech.com';
 
 /** Sends a form's fields to the business inbox. Throws with a readable message on failure. */
@@ -31,7 +31,7 @@ export function Honeypot() { return <div className="contact-trap" aria-hidden="t
 
 export function FormStatus({ state, error, sent }: { state: string; error: string; sent: string }) {
  if (state === 'sent') return <p className="form-status" role="status">{sent}</p>;
- if (state === 'error') return <p className="form-status form-error" role="alert">{error} You can also email <a href="mailto:business@vapicha.africa">business@vapicha.africa</a>.</p>;
+ if (state === 'error') return <p className="form-status form-error" role="alert">{error} You can also email <a href="mailto:hello@vapicha.africa">hello@vapicha.africa</a>.</p>;
  return null;
 }
 

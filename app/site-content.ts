@@ -9,7 +9,7 @@ import {
 export const COMPANY = {
   name: 'VaPicha',
   legalName: 'Inclusive Village Ltd',
-  email: 'business@vapicha.africa',
+  email: 'hello@vapicha.africa',
   phones: ['+234 911 110 0007', '+234 913 600 1592'],
   address: 'Lagos, Nigeria',
   policyDate: '25 November 2026',
@@ -22,7 +22,7 @@ export const ADVANTAGES: Item[] = [
   { icon: Cloud, title: 'Cloud-based, zero hardware', text: 'Run every branch from a browser. No servers, no installations, no upgrade weekends — new capabilities arrive automatically.' },
   { icon: ShieldCheck, title: 'Bank-grade controls', text: 'Maker-checker approvals, role-based access, transaction 2FA, AML monitoring and enforced day-close.' },
   { icon: Layers, title: 'One platform, every function', text: 'Core banking, lending, channels, accounting, HR & payroll and analytics share one ledger — reports always agree with the books.' },
-  { icon: Zap, title: 'Live in weeks', text: 'Guided configuration, data migration and a parallel run get you from contract to go-live quickly and safely.' },
+  { icon: Zap, title: 'Live in days', text: 'Guided configuration, data migration and a parallel run get you from contract to go-live quickly and safely.' },
   { icon: Wallet, title: 'Naira subscription pricing', text: 'Predictable monthly plans that grow with you. Add modules, users and branches when you need them.' },
 ];
 
@@ -101,3 +101,19 @@ export const JOBS: Job[] = [
 ];
 
 export const PERKS = ['Competitive salary and annual bonus', 'HMO for you and your family', 'Pension and learning budget', 'Hybrid working and modern equipment', 'Meaningful work powering financial inclusion'];
+
+// Headline numbers for the home page (from the core banking website export).
+export const STATS = [
+  { value: '20+', label: 'Integrated banking modules' },
+  { value: '4-eyes', label: 'Maker-checker on every sensitive action' },
+  { value: '2FA', label: 'On every staff & customer transaction' },
+  { value: '0', label: 'Servers for your institution to buy or run' },
+];
+
+// Subscription plans (from the core banking website export). Monthly prices, before 7.5% VAT.
+export const PLANS = [
+  { name: 'Starter', price: '₦250,000', for: 'Unit MFBs going digital', features: ['Core banking & accounts', 'Teller, till & vault', 'GL & financial accounting', 'Regulatory reporting', '10 users · 1 branch'] },
+  { name: 'Growth', price: '₦600,000', for: 'State MFBs scaling up', featured: true, features: ['Everything in Starter', 'Loans, savings & investments', 'Agency banking & cards', 'AML monitoring & BI', '40 users · 5 branches'] },
+  { name: 'Enterprise', price: '₦1,200,000', for: 'National MFBs & banks', features: ['Every module', 'HR & payroll, PFI lending', 'SME marketplace & open API', 'Priority support', '150 users · 25 branches'] },
+];
+export const PRICING_NOTE = 'Monthly prices shown before 7.5% VAT. Quarterly billing saves 5%; annual prepayment saves about 15%. A one-off implementation fee applies.';

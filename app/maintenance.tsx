@@ -16,7 +16,7 @@ export default function Maintenance() {
  <h2 id="maintenance-form-title">Get in touch</h2>
  <DemoForm/>
  </section>
- <div className="maintenance-contact"><a href="mailto:business@vapicha.africa">business@vapicha.africa <ArrowUpRight size={12}/></a><a href="tel:+2349111100007">+234 911 110 0007</a><a href="tel:+2349136001592">+234 913 600 1592</a></div>
+ <div className="maintenance-contact"><a href="mailto:hello@vapicha.africa">hello@vapicha.africa <ArrowUpRight size={12}/></a><a href="tel:+2349111100007">+234 911 110 0007</a><a href="tel:+2349136001592">+234 913 600 1592</a></div>
  <p className="maintenance-foot">©️ 2026 VaPicha | A Product of Inclusive Village Ltd.</p>
  </main>;
 }
