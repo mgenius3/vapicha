@@ -17,7 +17,7 @@ export default function AboutPage() {
    </div>
    <div className="about-cards">
     <div className="mission-card"><Eyebrow>OUR MISSION</Eyebrow><p>To power financial inclusion by giving every Nigerian financial institution world-class lending and banking infrastructure.</p></div>
-    <div className="page-card"><Eyebrow>VISION</Eyebrow><p>The most trusted lending and banking technology partner in West Africa.</p></div>
+    <div className="page-card"><Eyebrow>VISION</Eyebrow><p>The most trusted banking technology partner in West Africa.</p></div>
     <div className="page-card"><Eyebrow>HEADQUARTERS</Eyebrow><p>{COMPANY.address}</p></div>
    </div>
   </div></section>
@@ -36,6 +36,7 @@ export default function AboutPage() {
    <div className="page-grid g3">{COMMITMENTS.map(c=><div key={c.title} className="page-card"><span className="page-icon"><c.icon size={22}/></span><h3>{c.title}</h3><p>{c.text}</p></div>)}</div>
    <div className="page-inline-cta"><p>Want to work with us?</p><Link className="text-link" href="/careers">See careers at VaPicha <ArrowUpRight size={16}/></Link></div>
   </div></section>
-  <CtaBand title="Let’s build your institution’s future together."/>
+  {/* "Let’s build your institution’s future together." call-to-action, hidden for now. To show it again, replace this comment with:
+      <CtaBand title="Let’s build your institution’s future together."/> */}
  </SiteShell>;
 }

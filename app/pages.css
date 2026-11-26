@@ -209,3 +209,13 @@ html[data-theme=light] .timeline li::before{box-shadow:0 0 0 5px var(--night)}
    wordmark and tagline (logo-white.png: rows 66–70 of 102; logo.png: rows 68–72 of 98). */
 .footer-logo img.brand-dark{clip-path:polygon(0 0,100% 0,100% 67%,33% 67%,33% 100%,0 100%)}
 .footer-logo img.brand-light{clip-path:polygon(0 0,100% 0,100% 71%,33% 71%,33% 100%,0 100%)}
+
+/* Six menu links don't fit beside the logo and Book a demo below 900px, so use the ☰ menu from there
+   (the original layout only switched below 560px). */
+@media(max-width:900px){
+ .nav .mobile-menu{display:flex;padding:6px}
+ .nav .navlinks{display:none;position:absolute;left:20px;right:20px;top:72px;border:1px solid var(--line);box-shadow:0 16px 30px #0003;padding:20px;border-radius:8px;align-items:stretch;gap:0;z-index:60}
+ .nav .navlinks.open{display:flex;flex-direction:column}
+ .nav .navlinks a{padding:12px;font-size:14px}
+ .nav .theme-toggle{margin-left:auto}
+}

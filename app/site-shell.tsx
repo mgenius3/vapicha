@@ -11,10 +11,11 @@ import { COMPANY } from './site-content';
 export const MAINTENANCE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 
 const NAV = [
+ { href: '/', label: 'Home' },
  { href: '/solutions', label: 'Solutions' },
  { href: '/product', label: 'Product' },
- { href: '/pricing', label: 'Pricing' },
  { href: '/about', label: 'About us' },
+ { href: '/careers', label: 'Careers' },
  { href: '/contact', label: 'Contact' },
 ];
 

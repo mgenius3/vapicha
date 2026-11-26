@@ -80,5 +80,14 @@ function ReportsShot() {
  </AppShell></Frame>;
 }
 
-const SHOTS: Record<Feature['shot'], () => ReactNode> = { dashboard: DashboardShot, teller: TellerShot, loans: LoanShot, web: WebBankingShot, bills: BillsShot, reports: ReportsShot };
+function HrShot() {
+ return <Frame url="control.vapicha.africa/payroll"><AppShell active={1}>
+  <p className="shot-title">Payroll · November</p>
+  <div className="shot-grid g3"><Stat label="Employees" value="142"/><Stat label="Gross payroll" value="₦38.4M"/><Stat label="PAYE" value="₦4.1M"/></div>
+  <div className="shot-card shot-table"><div className="head"><span>Employee</span><span>Grade</span><span>Net pay</span><span>Status</span></div>{[['Amaka Eze','Officer II','₦412,500','Approved'],['Tunde Adeyemi','Teller','₦268,900','Approved'],['Grace Okon','Manager','₦905,000','Pending']].map(r=><div key={r[0]}>{r.map((c,i)=><span key={i} className={i===3&&c==='Pending'?'warn':''}>{c}</span>)}</div>)}</div>
+  <div className="shot-grid g2"><div className="shot-card"><Row a={<span className="muted">Pension (8%)</span>} b={<b>₦2.6M</b>}/><Row a={<span className="muted">NHF (2.5%)</span>} b={<b>₦0.8M</b>}/></div><div className="shot-card"><Row a={<span className="muted">Leave requests</span>} b={<b>4 pending</b>}/><Row a={<span className="muted">Appraisals due</span>} b={<b>12</b>}/></div></div>
+ </AppShell></Frame>;
+}
+
+const SHOTS: Record<Feature['shot'], () => ReactNode> = { dashboard: DashboardShot, teller: TellerShot, loans: LoanShot, web: WebBankingShot, bills: BillsShot, reports: ReportsShot, hr: HrShot };
 export function Screen({ name }: { name: Feature['shot'] }) { const S = SHOTS[name]; return <S/>; }

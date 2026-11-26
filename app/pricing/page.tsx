@@ -4,7 +4,7 @@ import { ArrowUpRight, Check, CircleHelp, Plus, Sprout } from 'lucide-react';
 import { SiteShell, Eyebrow, CtaBand } from '../site-shell';
 import { PLANS, PRICING_NOTE } from '../site-content';
 
-export const metadata: Metadata = { title: 'Pricing — VaPicha', description: 'Simple plans priced in naira: Starter, Growth and Enterprise. Plus answers to common questions.' };
+export const metadata: Metadata = { title: 'Pricing — VaPicha', description: 'Simple plans priced in naira: Base, Base+ and Enterprise. Plus answers to common questions.' };
 
 export default function PricingPage() {
  return <SiteShell>
@@ -14,11 +14,11 @@ export default function PricingPage() {
  {q:'Who is VaPicha built for?',a:'VaPicha supports Nigerian microfinance banks, cooperatives, fintech lenders, NGOs, MFIs, thrift and savings groups, and growing lending teams. Book a demo to explore how it fits your institution.'},
  {q:'Can we manage both individual and group loans?',a:'Yes. VaPicha supports individual and group loan products, with repayment schedules, rates and penalties. This includes local group lending models such as Adashe, Esusu and Ajo.'},
  {q:'How do we move from spreadsheets?',a:'Onboarding includes setting up your workspace, configuring products and operating rules, preparing your borrower records, and training your team. Your demo is a good time to discuss your existing data and migration needs.'},
- {q:'Are the plans priced in naira?',a:'Yes. Starter is ₦250,000, Growth ₦600,000 and Enterprise ₦1,200,000 per month, before 7.5% VAT. Quarterly billing saves 5% and annual prepayment about 15%; a one-off implementation fee applies. Confirm final fees, features and eligibility with the VaPicha team.'},
+ {q:'Are the plans priced in naira?',a:'Yes. Base is ₦250,000, Base+ ₦600,000 and Enterprise ₦1,200,000 per month, before 7.5% VAT. Quarterly billing saves 5% and annual prepayment about 15%; a one-off implementation fee applies. Confirm final fees, features and eligibility with the VaPicha team.'},
  {q:'What support is available for our team?',a:'On-site support, Email Support, Call, and WhatsApp support'},
  {q:'What happens when I request a demo?',a:'Complete the short form to send your request to our business team. You can also email hello@vapicha.africa directly.'}
  ].map((item,i)=><details key={item.q} className="faq-item" name="lending-faq"><summary><span className="faq-number">0{i+1}</span>{item.q}<Plus size={18}/></summary><p>{item.a}</p></details>)}</div></div></section>
  </div>
- <CtaBand/>
+ {/* "The next chapter of your lending starts here." call-to-action, hidden for now. To show it again, replace this comment with <CtaBand/> */}
  </SiteShell>;
 }

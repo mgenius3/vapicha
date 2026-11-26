@@ -20,6 +20,7 @@ export default function ProductPage() {
    <SectionHeading eyebrow="SECURITY & INTEGRATIONS" title="Controls your board" accent="and regulator will appreciate." center/>
    <div className="page-grid g3">{SECURITY.map(s=><div key={s.title} className="page-card row"><span className="page-icon"><s.icon size={22}/></span><div><h3>{s.title}</h3><p>{s.text}</p></div></div>)}</div>
   </div></section>
-  <CtaBand title="See it working for your institution." text="Book a demo and we’ll walk you through VaPicha with your own products and workflows in mind."/>
+  {/* "See it working for your institution." call-to-action, hidden for now. To show it again, replace this comment with:
+      <CtaBand title="See it working for your institution." text="Book a demo and we’ll walk you through VaPicha with your own products and workflows in mind."/> */}
  </SiteShell>;
 }

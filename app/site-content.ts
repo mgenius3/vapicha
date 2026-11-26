@@ -52,7 +52,7 @@ export const IMPLEMENTATION: Item[] = [
   { icon: LifeBuoy, title: 'Go live & grow', text: 'Switch over with on-site, email, call and WhatsApp support, then add modules and branches as you grow.' },
 ];
 
-export type Feature = { id: string; eyebrow: string; title: string; text: string; points: string[]; shot: 'dashboard' | 'teller' | 'loans' | 'web' | 'bills' | 'reports' };
+export type Feature = { id: string; eyebrow: string; title: string; text: string; points: string[]; shot: 'dashboard' | 'teller' | 'loans' | 'web' | 'bills' | 'reports' | 'hr' };
 export const FEATURES: Feature[] = [
   { id: 'dashboard', eyebrow: 'Command centre', title: 'See the whole institution at a glance', text: 'Deposits, loan book, inflows and outflows, branch performance and recent postings, all from the same ledger your accountants use.', points: ['Operations and management dashboards', 'Branch, product and officer views', 'Transaction monitoring with AML alerts'], shot: 'dashboard' },
   { id: 'teller', eyebrow: 'Branch operations', title: 'Fast, controlled counter service', text: 'Tellers find customers in seconds, see balances and KYC limits, and post deposits, withdrawals and transfers — each confirmed with a second factor.', points: ['Tills and vault with balancing and end-of-day checks', 'Maker-checker reversals', 'Printable receipts with verification codes'], shot: 'teller' },
@@ -60,6 +60,7 @@ export const FEATURES: Feature[] = [
   { id: 'digital', eyebrow: 'Internet banking', title: 'Personal and corporate online banking', text: 'Customers check balances, download statements, transfer to any Nigerian bank and pay bills. Companies get initiator and authoriser roles.', points: ['Two-factor authentication on payments', 'Saved beneficiaries and daily limits', 'Receipts for every transaction'], shot: 'web' },
   { id: 'bills', eyebrow: 'Bills & payments', title: 'Bills payment on every channel', text: 'Airtime, data, electricity and cable TV — at the branch, through agents and online. Checked with the biller first, refunded automatically if it fails.', points: ['Leading Nigerian billers', 'Electricity tokens and PINs on the receipt', 'Automatic refunds'], shot: 'bills' },
   { id: 'reporting', eyebrow: 'Compliance', title: 'Reporting from live data', text: 'Regulatory returns, prudential ratios, financial statements and operational reports come straight from the ledger — no spreadsheets, no re-keying.', points: ['Financial, credit and operational reports', 'A complete audit trail of every action', 'End-of-day, week and year closure controls'], shot: 'reports' },
+  { id: 'hr', eyebrow: 'HR & Payroll', title: 'Your people, on the same platform', text: 'Manage the full employee lifecycle on the same platform that controls staff roles and permissions — from onboarding and leave to monthly payroll with statutory deductions.', points: ['Employees, organisation, grades and leave', 'Payroll with PAYE, pension and NHF', 'Appraisals, training and recruitment'], shot: 'hr' },
 ];
 
 export const SECURITY: Item[] = [
@@ -112,8 +113,8 @@ export const STATS = [
 
 // Subscription plans (from the core banking website export). Monthly prices, before 7.5% VAT.
 export const PLANS = [
-  { name: 'Starter', price: '₦250,000', for: 'Unit MFBs going digital', features: ['Core banking & accounts', 'Teller, till & vault', 'GL & financial accounting', 'Regulatory reporting', '10 users · 1 branch'] },
-  { name: 'Growth', price: '₦600,000', for: 'State MFBs scaling up', featured: true, features: ['Everything in Starter', 'Loans, savings & investments', 'Agency banking & cards', 'AML monitoring & BI', '40 users · 5 branches'] },
+  { name: 'Base', price: '₦250,000', for: 'Unit MFBs going digital', features: ['Core banking & accounts', 'Teller, till & vault', 'GL & financial accounting', 'Regulatory reporting', '10 users · 1 branch'] },
+  { name: 'Base+', price: '₦600,000', for: 'State MFBs scaling up', featured: true, features: ['Everything in Base', 'Loans, savings & investments', 'Agency banking & cards', 'AML monitoring & BI', '40 users · 5 branches'] },
   { name: 'Enterprise', price: '₦1,200,000', for: 'National MFBs & banks', features: ['Every module', 'HR & payroll, PFI lending', 'SME marketplace & open API', 'Priority support', '150 users · 25 branches'] },
 ];
 export const PRICING_NOTE = 'Monthly prices shown before 7.5% VAT. Quarterly billing saves 5%; annual prepayment saves about 15%. A one-off implementation fee applies.';
