@@ -34,7 +34,7 @@ export default function Home() {
   </div></section>
 
   <section className="page-section"><div className="container feature-grid">
-   <figure className="feature-shot"><Screen name="web"/><figcaption>Illustrative screen · sample data</figcaption></figure>
+   <figure className="feature-shot"><Screen name="web"/></figure>
    <div className="feature-copy"><Eyebrow>DIGITAL BANKING</Eyebrow><h2>Give customers a branch in their pocket.</h2><p>Personal and corporate internet banking, bills payment and transfers to any Nigerian bank — every payment protected by two-factor authentication.</p>
     <ul className="page-checks">{['Corporate initiator and authoriser workflows that follow each company’s signing mandate','Bills payment through leading Nigerian billers, with automatic refunds if a payment fails','Inward and outward interbank transfers','Full receipts with verification codes for every transaction'].map(t=><li key={t}><CheckCircle2 size={15}/>{t}</li>)}</ul>
    </div>

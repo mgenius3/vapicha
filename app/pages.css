@@ -219,3 +219,5 @@ html[data-theme=light] .timeline li::before{box-shadow:0 0 0 5px var(--night)}
  .nav .navlinks a{padding:12px;font-size:14px}
  .nav .theme-toggle{margin-left:auto}
 }
+.footer-company-link{text-decoration:underline;text-underline-offset:3px}
+.footer-company-link:hover{color:var(--mint)}

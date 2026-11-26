@@ -13,7 +13,7 @@ export default function ProductPage() {
 
   {FEATURES.map((f,i)=><section key={f.id} id={f.id} className={'page-section feature-row'+(i%2?' alt flip':'')}><div className="container feature-grid">
    <div className="feature-copy"><Eyebrow>{f.eyebrow.toUpperCase()}</Eyebrow><h2>{f.title}</h2><p>{f.text}</p><ul className="page-checks">{f.points.map(p=><li key={p}><Check size={15}/>{p}</li>)}</ul></div>
-   <figure className="feature-shot"><Screen name={f.shot}/><figcaption>Illustrative screen · sample data</figcaption></figure>
+   <figure className="feature-shot"><Screen name={f.shot}/></figure>
   </div></section>)}
 
   <section className="page-section"><div className="container">
