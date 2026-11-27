@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight, Check, CircleHelp, Plus, Sprout } from 'lucide-react';
-import { SiteShell, Eyebrow, CtaBand } from '../site-shell';
+import { SiteShell, Eyebrow, CtaBand, PageHero } from '../site-shell';
 import { PLANS, PRICING_NOTE } from '../site-content';
 
 export const metadata: Metadata = { title: 'Pricing — VaPicha', description: 'Simple plans priced in naira: Base, Base+ and Enterprise. Plus answers to common questions.' };
 
 export default function PricingPage() {
  return <SiteShell>
+ <PageHero eyebrow="PRICING" title="Simple plans." accent="Priced in naira." text="Choose the plan that fits your institution today, and grow into the next one when you’re ready."/>
  <div className="pricing-page">
- <section className="section pricing" id="pricing"><div className="container"><div className="center-heading"><Eyebrow>PRICING</Eyebrow><h2>Simple plans that grow<span> with your institution.</span></h2><p>{PRICING_NOTE}</p></div><div className="pricing-grid">{PLANS.map(p=><article key={p.name} className={'plan '+(p.featured?'popular':'')}><div className="plan-top"><span>{p.name}</span>{p.featured&&<small>MOST POPULAR <Sprout size={12}/></small>}</div><p>{p.for}</p>{/* Prices hidden for now. To show them again, remove this comment wrapper: <div className="price">{p.price}</div><span className="price-period">/ month</span> */}<Link className={'button '+(p.featured?'':'button-outline')} href="/contact">Request a quote<ArrowUpRight size={16}/></Link><ul>{p.features.map(f=><li key={f}><Check size={15}/>{f}</li>)}</ul></article>)}</div><p className="pricing-note">Final fees, features and eligibility are confirmed with VaPicha.</p></div></section>
+ <section className="section pricing" id="pricing"><div className="container"><div className="pricing-grid">{PLANS.map(p=><article key={p.name} className={'plan '+(p.featured?'popular':'')}><div className="plan-top"><span>{p.name}</span>{p.featured&&<small>MOST POPULAR <Sprout size={12}/></small>}</div><p>{p.for}</p>{/* Prices hidden for now. To show them again, remove this comment wrapper: <div className="price">{p.price}</div><span className="price-period">/ month</span> */}<Link className={'button '+(p.featured?'':'button-outline')} href="/contact">Request a quote<ArrowUpRight size={16}/></Link><ul>{p.features.map(f=><li key={f}><Check size={15}/>{f}</li>)}</ul></article>)}</div><p className="pricing-note">{PRICING_NOTE} Final fees, features and eligibility are confirmed with VaPicha.</p></div></section>
   <section className="section faq-section" id="faqs"><div className="container faq-layout"><div className="faq-intro"><Eyebrow>A LITTLE MORE CLARITY</Eyebrow><h2>Good questions.<br/><span>Clear answers.</span></h2><p>Choosing a lending platform is a big step. Let’s make the next one feel a little simpler.</p><div className="faq-contact"><span><CircleHelp size={26}/></span><div><b>Have something else in mind?</b><a href="mailto:hello@vapicha.africa">Talk to a real person <ArrowUpRight size={15}/></a></div></div></div><div className="faq-list">{[
  {q:'Who is VaPicha built for?',a:'VaPicha supports Nigerian microfinance banks, cooperatives, fintech lenders, NGOs, MFIs, thrift and savings groups, and growing lending teams. Book a demo to explore how it fits your institution.'},
  {q:'Can we manage both individual and group loans?',a:'Yes. VaPicha supports individual and group loan products, with repayment schedules, rates and penalties. This includes local group lending models such as Adashe, Esusu and Ajo.'},
