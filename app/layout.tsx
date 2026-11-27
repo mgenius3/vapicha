@@ -9,5 +9,7 @@ import './contact-compliance.css';
 import './theme.css';
 import './maintenance.css';
 import './pages.css';
-export const metadata: Metadata = { title: 'VaPicha — Core banking and lending for Nigerian institutions', description: 'VaPicha runs your entire institution — customers, accounts, lending, payments, compliance and people — on one secure cloud platform built for Nigerian regulation.' };
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" data-theme="dark" suppressHydrationWarning><body><script dangerouslySetInnerHTML={{__html:`try{var t=localStorage.getItem('vapicha-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}`}}/>{children}</body></html>; }
+import './preloader.css';
+import Preloader from './preloader';
+export const metadata: Metadata = { title: 'VaPicha — Core Banking · Payments · Digital Channels · HR & Payroll for Nigerian Institutions', description: 'VaPicha runs your entire institution — customers, accounts, lending, payments, compliance and people — on one secure cloud platform built for Nigerian regulation.' };
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" data-theme="dark" suppressHydrationWarning><body><script dangerouslySetInnerHTML={{__html:`try{var t=localStorage.getItem('vapicha-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}`}}/><Preloader/>{children}</body></html>; }

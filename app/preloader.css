@@ -1,0 +1,8 @@
+/* The preloader-timeout animation hides the overlay even if JavaScript never runs. */
+.preloader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:var(--night,#081827);transition:opacity .4s ease,visibility .4s;animation:preloader-timeout 0s 6s forwards}
+.preloader.done{opacity:0;visibility:hidden}
+.preloader img{width:min(110px,30vw);height:auto;animation:preloader-pulse 1.4s ease-in-out infinite}
+html[data-theme=light] .preloader{background:#f8fbfd}
+@keyframes preloader-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.65;transform:scale(.96)}}
+@keyframes preloader-timeout{to{opacity:0;visibility:hidden}}
+@media (prefers-reduced-motion:reduce){.preloader img{animation:none}}
